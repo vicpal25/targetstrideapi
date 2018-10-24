@@ -7,6 +7,6 @@ const athletePreferencesSchema = new Schema({
     strava_id: Number
 })
 
-const ModelClass = mongoose.model('athletePreferences', athletePreferencesSchema);
+const ModelClass = mongoose.model('preferences', athletePreferencesSchema);
 
 module.exports = ModelClass;

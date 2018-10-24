@@ -14,6 +14,20 @@ exports.index = function (req, res, next) {
 
 }
 
+exports.getActivity = function(req, res, next) {
+
+    const activity_id = req.params.id;
+
+    stravaMiddleware.getActivity(activity_id)
+        .then(function (activity) {
+            res.status(200).send(activity);
+        })
+        .catch(function (err) {
+            res.status(500).json(err);
+        });
+
+}
+
 exports.getActivities = function(req, res, next) {
 
     const activties_id = req.params.id;

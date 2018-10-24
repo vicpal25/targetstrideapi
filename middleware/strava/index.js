@@ -79,23 +79,42 @@ module.exports = {
   UpdateAthletePreferences: function (preferences, id) {
     return Preferences.Update(preferences, id);
   },
+  getActivity: function(id) {
+
+    return new Promise((resolve, reject) => {
+
+      console.log('activity_id');
+      console.log(id);
+
+      strava.activities.get({'access_token': '37339e182ee178884b7353d74b7fd8802e64d898', 'id' : id }, function (err, payload, limits) {
+
+          if (err) {
+            reject(err);
+          }
+
+          resolve(payload);
+
+        });
+
+    });
+
+
+  },
   getActivities: function (id) {
 
     return new Promise((resolve, reject) => {
 
       strava.athlete.listActivities({
-        'access_token': '37339e182ee178884b7353d74b7fd8802e64d898'
-      }, function (err, payload, limits) {
+          'access_token': '37339e182ee178884b7353d74b7fd8802e64d898'
+        }, function (err, payload, limits) {
 
+          if (err) {
+            reject(err);
+          }
 
-        if (err) {
-          reject(err);
-        }
+          resolve(payload);
 
-        resolve(payload);
-
-      });
-
+        });
 
     });
 

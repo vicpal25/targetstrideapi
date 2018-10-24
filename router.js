@@ -23,14 +23,10 @@ module.exports = function(app) {
     app.post('/signin', requireSignin, Authentication.signin);
     app.post('/signup', Authentication.signup);
     app.get('/blogentries', BlogController.index);
-
-    app.get('/ui', (req, res) => {
-        res.status(200).send('ok');
-    })
-
-    app.get('/getAthlete/:id', AthleteController.index);
-    app.get('/getActivities/:id', AthleteController.getActivities);
-    app.get('/getAthletePreferences/:id',  AthleteController.getPreferences);
-    app.put('/getAthletePreferences/:id', AthleteController.updatePreferences);
+    app.get('/athlete/:id', AthleteController.index);
+    app.get('/activities/:id', AthleteController.getActivities);
+    app.get('/activity/:id', AthleteController.getActivity);
+    app.get('/preferences/:id',  AthleteController.getPreferences);
+    app.put('/preferences/:id', AthleteController.updatePreferences);
 
 }
