@@ -56,8 +56,6 @@ exports.getPreferences = function(req, res) {
         });
 
 }
-
-
 exports.updatePreferences = function(req, res) {
 
     const strava_id = req.params.id;
@@ -69,5 +67,18 @@ exports.updatePreferences = function(req, res) {
         .catch(function (err) {
             res.status(500).json(err);
         });
+}
 
+exports.getStats = function(req, res) {
+
+    const athleteid = req.params.id;
+
+    stravaMiddleware.getAthleteStats(athleteid)
+        .then(function (preferences) {
+            res.status(200).send(preferences);
+        })
+        .catch(function (err) {
+            console.log(err);
+            res.status(500).json(err);
+        });
 }
