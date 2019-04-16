@@ -5,6 +5,8 @@ const BlogController = require('./controllers/blog.controller');
 const AthleteController =  require('./controllers/athlete.controller');
 const CommentController =  require('./controllers/comments.controller');
 const ActivityController = require('./controllers/activity.controller');
+const NewsletterController = require('./controllers/newsletters.controller');
+var request = require("request");
 
 //Passport service provider
 const passportService = require('./services/passport');
@@ -50,7 +52,10 @@ module.exports = function(app) {
     app.put('/comments/:id', CommentController.updateComment);
     app.post('/comments/',  CommentController.createComment);
 
+    //Newsletter Controllers
+    app.get('/markets/', NewsletterController.getMarkets);
 
+    
     app.get('/stravalogin', passport.authenticate('strava', {scope:['public']}))
 
     // app.get('/callback',  function(req, res){
