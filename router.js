@@ -35,6 +35,10 @@ module.exports = function(app) {
         res.send('hi');
     });
 
+    app.post('/loadtest', function(req, res) {
+        res.send('hi');
+    });
+
     app.post('/signin', requireSignin, Authentication.signin);
     app.post('/signup', Authentication.signup);
     app.get('/blogentries', BlogController.index);
@@ -62,6 +66,7 @@ module.exports = function(app) {
     //     res.send('ok');
     // });
 
+    
 
     app.get('/callback', passport.authenticate('strava', {
         successRedirect: '/blogentries',
