@@ -6,6 +6,9 @@ const AthleteController =  require('./controllers/athlete.controller');
 const CommentController =  require('./controllers/comments.controller');
 const ActivityController = require('./controllers/activity.controller');
 const NewsletterController = require('./controllers/newsletters.controller');
+
+const LoadController = require('./controllers/load.controller');
+
 var request = require("request");
 
 //Passport service provider
@@ -35,10 +38,13 @@ module.exports = function(app) {
         res.send('hi');
     });
 
-    app.post('/loadtest', function(req, res) {
-        res.send('hi');
-    });
+    // app.post('/loadtest',LoadController.loadController);
 
+    app.get('/health', function(req, res) {
+
+        res.status(200).send('ok')
+
+    })
     app.post('/signin', requireSignin, Authentication.signin);
     app.post('/signup', Authentication.signup);
     app.get('/blogentries', BlogController.index);
@@ -66,7 +72,7 @@ module.exports = function(app) {
     //     res.send('ok');
     // });
 
-    
+
 
     app.get('/callback', passport.authenticate('strava', {
         successRedirect: '/blogentries',
