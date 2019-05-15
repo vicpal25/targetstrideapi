@@ -22,11 +22,11 @@ app.use(expressValidator());
 strava.load();
 
 
-const port = 3090; 
+const port = 8080; 
 const server = http.createServer(app);
 
 require('./router')(app);
 
-server.listen(3090);
+server.listen(8080);
 
 console.log('server listening on port ', port);
