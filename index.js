@@ -21,8 +21,9 @@ app.use(expressValidator());
 
 strava.load();
 
-const port = process.env.PORT || 5000; 
-const server = http.createServer(port);
+
+const port = process.env.PORT || 3090; 
+const server = http.createServer(app);
 
 require('./router')(app);
 
