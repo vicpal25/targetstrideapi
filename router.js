@@ -65,9 +65,9 @@ module.exports = function(app) {
     
     app.get('/stravalogin', passport.authenticate('strava', {scope:['public']}))
 
-    // app.get('/callback',  function(req, res){
-    //     res.send('ok');
-    // });
+    app.get('/health',  function(req, res){
+        res.send('ok');
+    });
 
 
     app.get('/callback', passport.authenticate('strava', {
