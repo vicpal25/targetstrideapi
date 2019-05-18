@@ -26,6 +26,6 @@ const server = http.createServer(port);
 
 require('./router')(app);
 
-server.listen(3090);
+server.listen(port);
 
 console.log('server listening on port ', port);
