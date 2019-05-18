@@ -6,6 +6,10 @@ const AthleteController =  require('./controllers/athlete.controller');
 const CommentController =  require('./controllers/comments.controller');
 const ActivityController = require('./controllers/activity.controller');
 const NewsletterController = require('./controllers/newsletters.controller');
+
+const NotificationController = require('./controllers/notification.controller');
+
+
 var request = require("request");
 
 //Passport service provider
@@ -51,6 +55,9 @@ module.exports = function(app) {
     app.get('/comments/:id',  CommentController.getComment);
     app.put('/comments/:id', CommentController.updateComment);
     app.post('/comments/',  CommentController.createComment);
+
+
+    app.post('/notification/email', NotificationController.sendEmail);
 
     //Newsletter Controllers
     app.get('/markets/', NewsletterController.getMarkets);
