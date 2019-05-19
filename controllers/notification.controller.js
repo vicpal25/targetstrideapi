@@ -85,7 +85,10 @@ const data = req.body;
   "<table class=\"row\"\r\n style=\"border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%\">\r\n<tbody>\r\n<tr\r\n style=\"padding:0;text-align:left;vertical-align:top\">\r\n<th class=\"small-12 large-6 columns first\"\r\n style=\"Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:16px;padding-left:0!important;padding-right:0!important;text-align:left;width:50%\">\r\n" + 
   "<table\r\n style=\"border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%\">\r\n" + 
   "<tbody>\r\n <tr\r\n  style=\"padding:0;text-align:left;vertical-align:top\">\r\n<th\r\n style=\"Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left\">\r\n<p\r\n style=\"Margin:0;Margin-bottom:10px;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:left\">\r\n " + 
-			"<p\r\n  style=\"Margin:0;Margin-bottom:10px;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:left\">\r\n" + 
+      "<p\r\n  style=\"Margin:0;Margin-bottom:10px;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:left\">\r\n" + 
+
+      "<strong>Customer<\/strong><br>"+ data.customer +"\r\n<\/p>\r\n " + 
+			"<p\r\n style=\"Margin:0;Margin-bottom:10px;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:left\">\r\n " +             
 			"<strong>Phone<\/strong><br>"+ data.phone +"\r\n<\/p>\r\n " + 
 			"<p\r\n style=\"Margin:0;Margin-bottom:10px;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:left\">\r\n " + 
 			" <strong>Email\r\n Address<\/strong><br>" + data.email + "\r\n" + 
