@@ -43,21 +43,9 @@ var Mailjet = require('node-mailjet').connect('a18eb511ed2ca0640e1d583a1a3d3dae'
 
 exports.sendEmail = function(req, res, next) {
 
-  // var sendEmail = Mailjet.post('send');
- 
-  // var emailData = {
-  // 'FromEmail': 'support@santanapianomovers.com',
-  // 'FromName': 'My Name',
-  // 'Subject': 'Test with the NodeJS Mailjet wrapper',
-  // 'Text-part': 'Hello NodeJs !',
-  // 'Recipients': [{'Email': 'victorpalma0720@gmail.com'}],
-  // 'Attachments': [{
-  //   "Content-Type": "text-plain",
-  //   "Filename": "test.txt",
-  //   "Content": "VGhpcyBpcyB5b3VyIGF0dGFjaGVkIGZpbGUhISEK", // Base64 for "This is your attached file!!!"
-  // }]
-  // }
+const toEmail = "victorpalma0720@gmail.com";
 
+// "support@santanapianomovers.net"
 
 const data = req.body;
   const request = Mailjet
@@ -71,7 +59,7 @@ const data = req.body;
 },
 "To": [
 {
-"Email": "support@santanapianomovers.net",
+"Email": toEmail,
 "Name": "Support @ Santana Piano Movers"
 }
 ],
