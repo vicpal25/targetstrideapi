@@ -43,9 +43,7 @@ var Mailjet = require('node-mailjet').connect('a18eb511ed2ca0640e1d583a1a3d3dae'
 
 exports.sendEmail = function(req, res, next) {
 
-const toEmail = "victorpalma0720@gmail.com";
-
-// "support@santanapianomovers.net"
+const toEmail = "support@santanapianomovers.net";
 
 const data = req.body;
   const request = Mailjet
