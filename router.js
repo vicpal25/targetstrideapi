@@ -57,7 +57,7 @@ module.exports = function(app) {
     app.post('/comments/',  CommentController.createComment);
 
 
-    app.post('/notification/email', NotificationController.sendEmail);
+    // app.post('/notification/email', NotificationController.sendEmail);
 
     //Newsletter Controllers
     app.get('/markets/', NewsletterController.getMarkets);
@@ -77,4 +77,4 @@ module.exports = function(app) {
 
 
 
-}
+};
